@@ -59,7 +59,7 @@ export default function Projects() {
     
     {
       name: "Portfolio Website",
-      demo: "/videos/portfolio.gif",
+      demo: "/videos/Port.gif",
       description: "Next.js/TS site scoring 95+ Lighthouse, 30% faster load times with headless CMS.",
       period: "2023",
       role: "Full Stack Developer",
