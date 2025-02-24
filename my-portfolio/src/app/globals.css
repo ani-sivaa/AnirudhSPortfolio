@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 26, 26, 26;
+  --background-end-rgb: 0, 0, 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  overflow: hidden;
+}
+
+.neon-text {
+  color: #0FF0FC;
+  text-shadow: 0 0 10px rgba(15, 240, 252, 0.5);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.snap-y::-webkit-scrollbar {
+  display: none;
+}
+
+.snap-y {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+html, body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 26, 26, 26;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+}
+
+.neon-text {
+  color: #0FF0FC;
+  text-shadow: 0 0 10px rgba(15, 240, 252, 0.5);
+}
+
+.text-shadow-sm {
+  text-shadow: 0 0 5px rgba(15, 240, 252, 0.4);
+}
