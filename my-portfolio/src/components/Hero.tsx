@@ -1,12 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaLaptopCode, FaCode, FaGithub, FaLinkedin, FaFileDownload } from "react-icons/fa";
+import { FaLaptopCode, FaCode, FaGithub, FaLinkedin, FaFileDownload, FaPhone } from "react-icons/fa";
 import Image from 'next/image';
 
 const techStack = [
   { icon: FaCode, name: 'Full Stack Developer', href: '#projects' },
-  { icon: FaLaptopCode, name: 'AI Enthusiast', href: '#skills' },
+  { icon: FaLaptopCode, name: 'Skill Set', href: '#skills' },
 ];
 
 export default function Hero() {
@@ -33,7 +33,7 @@ export default function Hero() {
             </p>
             
             <div className="mt-8">
-              <p className="text-sm text-[#E0E0E0]/60 mb-4">Currently exploring Next.js 14 and LLM applications</p>
+              <p className="text-sm text-[#E0E0E0]/60 mb-4">Currently exploring the intersection between AI and Agriculture</p>
               <motion.div 
                 className="flex flex-wrap gap-4"
                 initial={{ opacity: 0, y: 20 }}
@@ -69,10 +69,13 @@ export default function Hero() {
                 >
                   <FaLinkedin size={24} />
                 </a>
+              <a href="mailto:anisiva213@gmail.com" 
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0FF0FC]/10 hover:bg-[#0FF0FC]/20 text-[#0FF0FC] transition-colors">
                 <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0FF0FC]/10 hover:bg-[#0FF0FC]/20 text-[#0FF0FC] transition-colors">
-                  <FaFileDownload />
-                  <span>Resume</span>
+                  <FaPhone />
+                  <span>Contact</span>
                 </button>
+                </a>
               </div>
             </div>
           </motion.div>
