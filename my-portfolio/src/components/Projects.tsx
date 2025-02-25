@@ -149,7 +149,7 @@ export default function Projects() {
                       fill
                       className="object-cover"
                       onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-                        e.target.src = '/images/placeholder.png';
+                        (e.target as HTMLImageElement).src = '/images/placeholder.png';
                       }}
                     />
                   </motion.div>
