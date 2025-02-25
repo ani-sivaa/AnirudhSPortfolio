@@ -95,7 +95,7 @@ export default function Hero() {
                   <div className="absolute inset-0 rounded-xl border border-[#0FF0FC]/30 shadow-[inset_0_0_15px_rgba(15,240,252,0.2)] transition-all duration-300" />
                 </div>
                 <Image
-                  src="/images/face/image1.jpeg"
+                  src="/images/face/image.jpeg"
                   alt="Profile"
                   fill
                   className="object-cover rounded-xl"
