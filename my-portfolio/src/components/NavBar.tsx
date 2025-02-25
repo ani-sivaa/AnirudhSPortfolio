@@ -41,7 +41,7 @@ const Navbar = () => {
     return () => observers.forEach(observer => observer.disconnect());
   }, [sections]);
 
-  const handleNavClick = (sectionId) => {
+  const handleNavClick = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
