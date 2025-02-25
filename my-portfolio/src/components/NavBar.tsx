@@ -22,8 +22,7 @@ const Navbar = () => {
       threshold: 0.4
     };
 
-    const callback = (entries) => {
-      entries.forEach(entry => {
+    const callback = (entries: IntersectionObserverEntry[]) => {      entries.forEach(entry => {
         if (entry.isIntersecting) {
           setActiveSection(entry.target.id);
         }
