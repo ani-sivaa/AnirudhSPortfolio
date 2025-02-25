@@ -84,13 +84,13 @@ export default function Background() {
       node.vy *= 0.98;
 
       // Keep within bounds
-      if (node.x < 0 || node.x > canvas.width) {
+      if (node.x < 0 || node.x > (canvas?.width||0)) {
         node.vx *= -1;
-        node.x = Math.max(0, Math.min(canvas.width, node.x));
+        node.x = Math.max(0, Math.min(canvas?.width||0, node.x));
       }
-      if (node.y < 0 || node.y > canvas.height) {
+      if (node.y < 0 || node.y > (canvas?.height||0)) {
         node.vy *= -1;
-        node.y = Math.max(0, Math.min(canvas.height, node.y));
+        node.y = Math.max(0, Math.min(canvas?.height||0, node.y));
       }
 
       // Gradually reduce energy

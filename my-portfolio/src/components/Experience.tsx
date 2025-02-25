@@ -50,6 +50,9 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
           className="relative w-full h-full"
         >
           {isGif(images[currentIndex]) ? (
+            
+            // eslint-disable-next-line @next/next/no-img-element 
+
             <img
               src={images[currentIndex]}
               alt={`Slide ${currentIndex + 1}`}
@@ -159,8 +162,7 @@ export default function Experience() {
     const container = containerRef.current;
     if (!container) return;
 
-    let isAtEndOfScroll = false;
-    let isAtStartOfScroll = true;
+    
 
     const handleScroll = (e: WheelEvent) => {
       const { scrollTop, scrollHeight, clientHeight } = container;

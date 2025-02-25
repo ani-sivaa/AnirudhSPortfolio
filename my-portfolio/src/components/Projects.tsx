@@ -148,7 +148,7 @@ export default function Projects() {
                       alt={`${project.name} Demo`}
                       fill
                       className="object-cover"
-                      onError={(e: any) => {
+                      onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
                         e.target.src = '/images/placeholder.png';
                       }}
                     />

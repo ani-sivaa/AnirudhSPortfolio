@@ -1,21 +1,21 @@
 'use client';
+import { useState, useEffect, useMemo } from 'react';
 
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaHome, FaBriefcase, FaProjectDiagram, FaLaptopCode } from 'react-icons/fa';
 
 const Navbar = () => {
-  const [activeSection, setActiveSection] = useState('hero');
-
-  const sections = [
-    { id: 'hero', label: 'Home', icon: FaHome },
-    { id: 'experience', label: 'Experience', icon: FaBriefcase },
-    { id: 'projects', label: 'Projects', icon: FaProjectDiagram },
-    { id: 'skills', label: 'Skills', icon: FaLaptopCode }
-  ];
+    const [activeSection, setActiveSection] = useState('hero');
+  
+    const sections = useMemo(() => [
+      { id: 'hero', label: 'Home', icon: FaHome },
+      { id: 'experience', label: 'Experience', icon: FaBriefcase },
+      { id: 'projects', label: 'Projects', icon: FaProjectDiagram },
+      { id: 'skills', label: 'Skills', icon: FaLaptopCode }
+    ], []);
 
   useEffect(() => {
-    const observers = [];
+    const observers: IntersectionObserver[] = [];
     const options = {
       root: null,
       rootMargin: '0px',
