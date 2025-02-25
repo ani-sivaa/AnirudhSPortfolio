@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaLaptopCode, FaCode, FaGithub, FaLinkedin, FaFileDownload, FaPhone } from "react-icons/fa";
+import { FaLaptopCode, FaCode, FaGithub, FaLinkedin, FaPhone } from "react-icons/fa";
 import Image from 'next/image';
 
 const techStack = [
