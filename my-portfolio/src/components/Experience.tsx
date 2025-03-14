@@ -162,8 +162,6 @@ export default function Experience() {
     const container = containerRef.current;
     if (!container) return;
 
-    
-
     const handleScroll = (e: WheelEvent) => {
       const { scrollTop, scrollHeight, clientHeight } = container;
       const isScrollingDown = e.deltaY > 0;
@@ -220,8 +218,8 @@ export default function Experience() {
                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#0FF0FC] shadow-[0_0_8px_#0FF0FC]" />
                 <div className="mb-8 relative">
                   <div className="flex flex-col space-y-4">
-                    <div className="flex justify-between items-start gap-12">
-                      <div className="flex-grow max-w-2xl">
+                    <div className="flex justify-between items-start gap-6 md:gap-12">
+                      <div className="flex-grow max-w-2xl w-full">
                         <div className="flex items-center gap-4 mb-6">
                           <div className="flex items-center gap-4">
                             <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-white/5 p-2 border border-[#0FF0FC]/20 shadow-[0_0_12px_#0FF0FC20] transition-shadow">
@@ -233,7 +231,7 @@ export default function Experience() {
                               />
                             </div>
                             <div>
-                              <h3 className="text-2xl font-bold transition-colors">
+                              <h3 className="text-xl md:text-2xl font-bold transition-colors">
                                 {exp.company}
                               </h3>
                               <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-[#0FF0FC]/10 text-[#0FF0FC] border border-[#0FF0FC]/20 shadow-[0_0_8px_#0FF0FC40]">
@@ -266,7 +264,7 @@ export default function Experience() {
                           </p>
                         </div>
                       </div>
-                      <div className="w-[400px] flex-shrink-0">
+                      <div className="w-full md:w-[400px] flex-shrink-0">
                         <ImageSlider images={exp.images} />
                       </div>
                     </div>

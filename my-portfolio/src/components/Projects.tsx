@@ -82,11 +82,11 @@ export default function Projects() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2 }}
-          className="text-3xl font-bold mb-12 neon-text"
+          className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 neon-text"
         >
           Projects
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={project.name}
@@ -94,10 +94,9 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2, delay: index * 0.1 }}
               onClick={() => project.devpost && window.open(project.devpost, '_blank')}
-              className={`relative group rounded-xl ${project.isAward ? 'bg-gradient-to-br from-[#1A1A1A]/40 to-[#FFD700]/5' : 'bg-[#1A1A1A]/40'} backdrop-blur-sm border ${project.isAward ? 'border-[#FFD700]/30' : 'border-[#333333]'} hover:border-[#0FF0FC]/30 p-4 transition-all duration-300 ${project.devpost ? 'cursor-pointer' : ''}`}
+              className={`relative group rounded-xl ${project.isAward ? 'bg-gradient-to-br from-[#1A1A1A]/40 to-[#FFD700]/5' : 'bg-[#1A1A1A]/40'} backdrop-blur-sm border ${project.isAward ? 'border-[#FFD700]/30' : 'border-[#333333]'} hover:border-[#0FF0FC]/30 p-3 md:p-4 transition-all duration-300 ${project.devpost ? 'cursor-pointer' : ''}`}
             >
               <div className="flex flex-col h-full">
-                {/* Project Header */}
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex items-start gap-3 flex-1 min-w-0">
                     <div>
@@ -134,8 +133,7 @@ export default function Projects() {
                   </div>
                 </div>
 
-                {/* Project Image */}
-                <div className="relative w-full h-48 mb-4">
+                <div className="relative w-full h-36 md:h-48 mb-4">
                   <motion.div 
                     className="relative h-full rounded-lg overflow-hidden group"
                     whileHover={{ scale: 1.02 }}
@@ -155,7 +153,6 @@ export default function Projects() {
                   </motion.div>
                 </div>
 
-                {/* Project Details */}
                 <div>
                   <div className="px-2 py-0.5 text-xs rounded-full bg-[#0FF0FC]/5 border border-[#0FF0FC]/20 text-[#0FF0FC]/70 inline-block mb-3">
                     {project.role}
@@ -187,7 +184,6 @@ export default function Projects() {
                 </div>
               </div>
               
-              {/* Hover Effect Background */}
               <div className={`absolute inset-0 -z-10 bg-gradient-to-r ${project.isAward ? 'from-[#FFD700]/0 via-[#FFD700]/5 to-[#FFD700]/0' : 'from-[#5856D6]/0 via-[#5856D6]/5 to-[#5856D6]/0'} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-xl`} />
             </motion.div>
           ))}

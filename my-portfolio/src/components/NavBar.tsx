@@ -49,9 +49,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed right-4 top-1/2 transform -translate-y-1/2 z-50">
-      <div className="bg-[#1A1A1A]/90 backdrop-blur-lg py-8 px-3 rounded-2xl border border-[#0FF0FC]/20 shadow-[0_0_20px_rgba(15,240,252,0.3)]">
-        <ul className="flex flex-col items-center gap-6 w-20">
+    <nav className="fixed bottom-4 md:right-4 md:top-1/2 md:transform md:-translate-y-1/2 z-50 w-full md:w-auto px-4 md:px-0">
+      <div className="bg-[#1A1A1A]/90 backdrop-blur-lg py-4 md:py-8 px-3 rounded-2xl border border-[#0FF0FC]/20 shadow-[0_0_20px_rgba(15,240,252,0.3)]">
+        <ul className="flex md:flex-col items-center justify-around md:gap-6 w-full md:w-20">
           {sections.map((section) => {
             const isActive = activeSection === section.id;
             
@@ -69,7 +69,7 @@ const Navbar = () => {
                 <button
                   onClick={() => handleNavClick(section.id)}
                   className={`
-                    flex flex-col items-center justify-center gap-2 p-3 rounded-xl w-full transition-all duration-300
+                    flex flex-col items-center justify-center gap-1 md:gap-2 p-2 md:p-3 rounded-xl w-full transition-all duration-300
                     ${isActive 
                       ? 'bg-[#0FF0FC]/20 border border-[#0FF0FC]/50 shadow-[0_0_10px_rgba(15,240,252,0.3)]' 
                       : 'bg-transparent border border-transparent hover:bg-[#0FF0FC]/10 hover:border-[#0FF0FC]/20'}
@@ -77,7 +77,7 @@ const Navbar = () => {
                   aria-label={section.label}
                 >
                   <motion.div
-                    className={`text-xl ${isActive ? 'text-[#0FF0FC]' : 'text-[#999999]'}`}
+                    className={`text-lg md:text-xl ${isActive ? 'text-[#0FF0FC]' : 'text-[#999999]'}`}
                     whileHover={{ scale: 1.2 }}
                     transition={{ duration: 0.2 }}
                   >
@@ -85,7 +85,7 @@ const Navbar = () => {
                   </motion.div>
                   
                   <span 
-                    className={`text-xs font-medium text-center leading-tight ${
+                    className={`text-[10px] md:text-xs font-medium text-center leading-tight ${
                       isActive 
                         ? 'text-[#0FF0FC]' 
                         : 'text-[#E0E0E0]'

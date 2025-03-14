@@ -23,12 +23,12 @@ export default function Hero() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="space-y-8"
+            className="space-y-8 order-2 md:order-1"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            <h1 className="text-3xl md:text-6xl font-bold mb-4">
               Hi, I&apos;m <span className="text-[#0FF0FC]">Anirudh Sivakumar</span>
             </h1>
-            <p className="text-lg md:text-xl mb-6 text-[#E0E0E0]/80">
+            <p className="text-base md:text-xl mb-6 text-[#E0E0E0]/80">
               A passionate Computer Science graduate from UC Santa Cruz specializing in full-stack development and machine learning. I build immersive web experiences and intelligent systems that solve real-world problems.
             </p>
             
@@ -44,15 +44,15 @@ export default function Hero() {
                   <button
                     key={name}
                     onClick={() => handleClick(href)}
-                    className="flex items-center gap-2 px-4 py-3 rounded-lg bg-[#555555]/20 hover:bg-[#555555]/30 transition-colors cursor-pointer hover:-translate-y-1 transform duration-300"
+                    className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#555555]/20 hover:bg-[#555555]/30 transition-colors cursor-pointer hover:-translate-y-1 transform duration-300"
                   >
-                    <Icon className="text-[#0FF0FC] text-xl" />
-                    <span className="text-sm font-medium">{name}</span>
+                    <Icon className="text-[#0FF0FC] text-lg" />
+                    <span className="text-xs md:text-sm font-medium">{name}</span>
                   </button>
                 ))}
               </motion.div>
 
-              <div className="mt-8 flex items-center gap-6">
+              <div className="mt-6 flex items-center gap-4 flex-wrap">
                 <a
                   href="https://github.com/ani-sivaa"
                   target="_blank"
@@ -69,18 +69,18 @@ export default function Hero() {
                 >
                   <FaLinkedin size={24} />
                 </a>
-              <a href="mailto:anisiva213@gmail.com" 
+                <a href="mailto:anisiva213@gmail.com" 
                   className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0FF0FC]/10 hover:bg-[#0FF0FC]/20 text-[#0FF0FC] transition-colors">
-                <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0FF0FC]/10 hover:bg-[#0FF0FC]/20 text-[#0FF0FC] transition-colors">
-                  <FaPhone />
-                  <span>Contact</span>
-                </button>
+                  <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0FF0FC]/10 hover:bg-[#0FF0FC]/20 text-[#0FF0FC] transition-colors">
+                    <FaPhone />
+                    <span>Contact</span>
+                  </button>
                 </a>
               </div>
             </div>
           </motion.div>
 
-          <div className="order-first md:order-last relative h-[500px] w-full flex items-center justify-center">
+          <div className="order-1 md:order-2 relative h-[300px] md:h-[500px] w-full flex items-center justify-center">
             <div className="absolute inset-0 bg-[#0FF0FC]/5 blur-[100px] rounded-full" />
             <motion.div
               className="absolute w-[280px] h-[380px] rounded-xl overflow-hidden shadow-[0_0_30px_rgba(15,240,252,0.3)]"
