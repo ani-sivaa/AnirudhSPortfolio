@@ -55,16 +55,24 @@ body {
   
   main {
     height: auto;
+    overflow-y: auto;
+    padding-bottom: 80px; /* Space for bottom navigation */
   }
   
   section {
     min-height: 100vh;
     height: auto;
-    padding-bottom: 80px;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: visible;
   }
 
   #hero {
     padding-top: 2rem;
+  }
+
+  #experience, #projects, #skills {
+    padding-top: 4rem;
   }
 }
 

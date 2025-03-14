@@ -76,25 +76,17 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="w-full py-16 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.2 }}
-          className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 neon-text"
-        >
+        <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 neon-text">
           Projects
-        </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {projects.map((project, index) => (
-            <motion.div
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <div
               key={project.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2, delay: index * 0.1 }}
               onClick={() => project.devpost && window.open(project.devpost, '_blank')}
-              className={`relative group rounded-xl ${project.isAward ? 'bg-gradient-to-br from-[#1A1A1A]/40 to-[#FFD700]/5' : 'bg-[#1A1A1A]/40'} backdrop-blur-sm border ${project.isAward ? 'border-[#FFD700]/30' : 'border-[#333333]'} hover:border-[#0FF0FC]/30 p-3 md:p-4 transition-all duration-300 ${project.devpost ? 'cursor-pointer' : ''}`}
+              className={`relative group rounded-xl ${project.isAward ? 'bg-gradient-to-br from-[#1A1A1A]/40 to-[#FFD700]/5' : 'bg-[#1A1A1A]/40'} backdrop-blur-sm border ${project.isAward ? 'border-[#FFD700]/30' : 'border-[#333333]'} hover:border-[#0FF0FC]/30 p-4 transition-all duration-300 ${project.devpost ? 'cursor-pointer' : ''}`}
             >
               <div className="flex flex-col h-full">
                 <div className="flex items-start justify-between mb-6">
@@ -185,7 +177,7 @@ export default function Projects() {
               </div>
               
               <div className={`absolute inset-0 -z-10 bg-gradient-to-r ${project.isAward ? 'from-[#FFD700]/0 via-[#FFD700]/5 to-[#FFD700]/0' : 'from-[#5856D6]/0 via-[#5856D6]/5 to-[#5856D6]/0'} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-xl`} />
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
