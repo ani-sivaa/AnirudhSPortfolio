@@ -62,7 +62,7 @@ body {
   section {
     min-height: 100vh;
     height: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     position: relative;
     overflow: visible;
   }
@@ -83,12 +83,18 @@ body {
     padding-bottom: 4rem;
     position: relative;
     z-index: 1;
+    min-height: auto; /* Allow projects section to be shorter */
+    height: auto;
+    display: block;
+    clear: both;
   }
 
   #skills {
     margin-top: 4rem;
     padding-top: 2rem;
     padding-bottom: 6rem;
+    position: relative;
+    z-index: 1;
   }
 }
 

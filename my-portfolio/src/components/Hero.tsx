@@ -16,7 +16,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="w-full min-h-screen flex items-center justify-center relative z-10">
+    <section id="hero" className="w-full min-h-screen flex items-center justify-center relative z-10 mb-20 md:mb-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
