@@ -71,8 +71,24 @@ body {
     padding-top: 2rem;
   }
 
-  #experience, #projects, #skills {
-    padding-top: 4rem;
+  #experience {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  #projects {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  #skills {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 6rem;
   }
 }
 

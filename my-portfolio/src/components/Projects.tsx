@@ -175,8 +175,6 @@ export default function Projects() {
                   </ul>
                 </div>
               </div>
-              
-              <div className={`absolute inset-0 -z-10 bg-gradient-to-r ${project.isAward ? 'from-[#FFD700]/0 via-[#FFD700]/5 to-[#FFD700]/0' : 'from-[#5856D6]/0 via-[#5856D6]/5 to-[#5856D6]/0'} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-xl`} />
             </div>
           ))}
         </div>
