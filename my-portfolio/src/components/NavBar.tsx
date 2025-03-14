@@ -49,8 +49,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed bottom-4 md:right-4 md:top-1/2 md:transform md:-translate-y-1/2 z-50 w-full md:w-auto px-4 md:px-0">
-      <div className="bg-[#1A1A1A]/90 backdrop-blur-lg py-4 md:py-8 px-3 rounded-2xl border border-[#0FF0FC]/20 shadow-[0_0_20px_rgba(15,240,252,0.3)]">
+    <nav className="fixed bottom-0 md:right-4 md:top-1/2 md:transform md:-translate-y-1/2 z-50 w-full md:w-auto px-4 md:px-0">
+      <div className="bg-[#1A1A1A]/90 backdrop-blur-lg py-3 md:py-8 px-3 rounded-t-2xl md:rounded-2xl border border-[#0FF0FC]/20 shadow-[0_0_20px_rgba(15,240,252,0.3)]">
         <ul className="flex md:flex-col items-center justify-around md:gap-6 w-full md:w-20">
           {sections.map((section) => {
             const isActive = activeSection === section.id;

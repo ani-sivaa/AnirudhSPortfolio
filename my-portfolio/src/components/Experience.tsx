@@ -191,83 +191,72 @@ export default function Experience() {
   if (!isMounted) return null;
 
   return (
-    <section id="experience" className="h-screen w-full">
+    <section id="experience" className="min-h-screen w-full py-20 px-4">
       <div 
         ref={containerRef}
-        className="h-full w-full overflow-y-auto"
-        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        className="h-full w-full"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <motion.h2 
-            initial={{ opacity: 0, y: -50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl font-bold mb-8 neon-text"
-          >
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 neon-text">
             Experience
-          </motion.h2>
-          <div className="space-y-6">
-            {experiences.map((exp, index) => (
-              <motion.div
+          </h2>
+          <div className="space-y-12">
+            {experiences.map((exp) => (
+              <div
                 key={exp.company}
-                initial={{ opacity: 0, y: -50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
                 className="relative pl-8 border-l-2 border-[#0FF0FC]/30"
               >
                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#0FF0FC] shadow-[0_0_8px_#0FF0FC]" />
-                <div className="mb-8 relative">
-                  <div className="flex flex-col space-y-4">
-                    <div className="flex justify-between items-start gap-6 md:gap-12">
+                <div className="mb-8">
+                  <div className="flex flex-col space-y-6">
+                    <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
                       <div className="flex-grow max-w-2xl w-full">
                         <div className="flex items-center gap-4 mb-6">
-                          <div className="flex items-center gap-4">
-                            <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-white/5 p-2 border border-[#0FF0FC]/20 shadow-[0_0_12px_#0FF0FC20] transition-shadow">
-                              <Image
-                                src={exp.companyLogo}
-                                alt={exp.company}
-                                fill
-                                className="object-contain p-1"
-                              />
-                            </div>
-                            <div>
-                              <h3 className="text-xl md:text-2xl font-bold transition-colors">
-                                {exp.company}
-                              </h3>
-                              <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-[#0FF0FC]/10 text-[#0FF0FC] border border-[#0FF0FC]/20 shadow-[0_0_8px_#0FF0FC40]">
-                                {exp.type}
-                              </span>
-                            </div>
+                          <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-white/5 p-2 border border-[#0FF0FC]/20 shadow-[0_0_12px_#0FF0FC20]">
+                            <Image
+                              src={exp.companyLogo}
+                              alt={exp.company}
+                              fill
+                              className="object-contain p-1"
+                            />
+                          </div>
+                          <div>
+                            <h3 className="text-xl lg:text-2xl font-bold">
+                              {exp.company}
+                            </h3>
+                            <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-[#0FF0FC]/10 text-[#0FF0FC] border border-[#0FF0FC]/20">
+                              {exp.type}
+                            </span>
                           </div>
                         </div>
-                        <div className="flex flex-col gap-3 mb-8">
-                          <div className="inline-flex items-center gap-2 text-[#0FF0FC] bg-[#0FF0FC]/5 px-4 py-2 rounded-lg border border-[#0FF0FC]/20 shadow-[0_0_12px_#0FF0FC20]">
+                        
+                        <div className="flex flex-col gap-3 mb-6">
+                          <div className="inline-flex items-center gap-2 text-[#0FF0FC] bg-[#0FF0FC]/5 px-4 py-2 rounded-lg border border-[#0FF0FC]/20">
                             <BsCalendarEvent className="text-lg" />
                             <span className="text-sm font-medium">{exp.period}</span>
                           </div>
-                          <div className="flex items-center gap-3">
-                            <div className="inline-flex items-center gap-2 text-[#0FF0FC] bg-[#0FF0FC]/5 px-4 py-2 rounded-lg border border-[#0FF0FC]/20 shadow-[0_0_12px_#0FF0FC20]">
-                              <BsPersonVcard className="text-lg" />
-                              <span className="text-sm font-medium">{exp.role}</span>
-                            </div>
+                          <div className="inline-flex items-center gap-2 text-[#0FF0FC] bg-[#0FF0FC]/5 px-4 py-2 rounded-lg border border-[#0FF0FC]/20">
+                            <BsPersonVcard className="text-lg" />
+                            <span className="text-sm font-medium">{exp.role}</span>
                           </div>
                         </div>
-                        <div className="bg-[#0FF0FC]/5 p-6 rounded-lg border border-[#0FF0FC]/20 shadow-[0_0_12px_#0FF0FC20]">
+
+                        <div className="bg-[#0FF0FC]/5 p-6 rounded-lg border border-[#0FF0FC]/20">
                           <div className="flex items-center gap-2 mb-4">
                             <FaBriefcase className="text-[#0FF0FC] text-lg" />
-                            <p className="text-[#0FF0FC] text-lg font-medium">
-                              Work
-                            </p>
+                            <p className="text-[#0FF0FC] text-lg font-medium">Work</p>
                           </div>
-                          <p className="text-[#E0E0E0] text-lg leading-relaxed">
+                          <p className="text-[#E0E0E0] text-base lg:text-lg leading-relaxed">
                             {exp.description}
                           </p>
                         </div>
                       </div>
-                      <div className="w-full md:w-[400px] flex-shrink-0">
+                      
+                      <div className="w-full lg:w-[400px]">
                         <ImageSlider images={exp.images} />
                       </div>
                     </div>
+
                     <ul className="space-y-2 pl-4">
                       {exp.achievements.map((achievement, index) => (
                         <li key={index} className="text-[#E0E0E0]/80 relative">
@@ -278,7 +267,7 @@ export default function Experience() {
                     </ul>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

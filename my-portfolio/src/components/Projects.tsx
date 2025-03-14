@@ -41,7 +41,7 @@ export default function Projects() {
       name: "TalktoaHuman.ai / CAL HACKS 11.0 VAPI(YC 21) Virality Award",
       demo: "/images/ProjectImages/calhacks.png",
       description: "Tired of redundant customer service call menus? We deployed a voice agent to handle the call menu navigation for you and then forward the customer service call back to you when a real customer service agent is on the line!",
-      period: "2023",
+      period: "October 2024",
       role: "Backend Developer",
       stack: ["VAPI API", "groq"],
       achievements: [
@@ -59,9 +59,9 @@ export default function Projects() {
     
     {
       name: "Portfolio Website",
-      demo: "/videos/Port.gif",
+      demo: "/videos/port.gif",
       description: "Next.js/TS site scoring 95+ Lighthouse, 30% faster load times with headless CMS.",
-      period: "2023",
+      period: "November 2024 - Present",
       role: "Full Stack Developer",
       stack: ["Next.js", "TypeScript", "React", "Tailwind CSS"],
       achievements: [
