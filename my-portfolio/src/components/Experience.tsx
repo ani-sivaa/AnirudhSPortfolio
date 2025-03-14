@@ -191,12 +191,16 @@ export default function Experience() {
   if (!isMounted) return null;
 
   return (
-    <section id="experience" className="w-full min-h-screen relative z-10 mt-20 md:mt-0">
+    <section 
+      id="experience" 
+      className="w-full min-h-screen relative z-10 mt-20 md:mt-0"
+      ref={containerRef}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold mb-8 neon-text">
           Experience
         </h2>
-        <div className="space-y-16">
+        <div className="space-y-16 overflow-y-auto" style={{ maxHeight: 'calc(100vh - 150px)' }}>
           {experiences.map((exp) => (
             <div
               key={exp.company}

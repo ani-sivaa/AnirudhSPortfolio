@@ -76,12 +76,12 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="w-full py-16 md:py-20 relative">
+    <section id="projects" className="w-full py-16 md:py-20 relative min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 neon-text">
           Projects
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div
               key={project.name}
@@ -89,19 +89,21 @@ export default function Projects() {
               className={`relative group rounded-xl ${project.isAward ? 'bg-gradient-to-br from-[#1A1A1A]/40 to-[#FFD700]/5' : 'bg-[#1A1A1A]/40'} backdrop-blur-sm border ${project.isAward ? 'border-[#FFD700]/30' : 'border-[#333333]'} hover:border-[#0FF0FC]/30 p-4 transition-all duration-300 ${project.devpost ? 'cursor-pointer' : ''}`}
             >
               <div className="flex flex-col h-full">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-start gap-2 flex-1">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="flex items-start gap-3 flex-1 min-w-0">
                     <div>
-                      <div className="flex items-start gap-2">
-                        <h3 className="text-lg font-bold leading-tight">{project.name}</h3>
-                        {project.isAward && (
-                          <FaTrophy className="text-[#FFD700] animate-pulse flex-shrink-0 mt-1" size={16} />
-                        )}
+                      <div className="flex flex-col gap-1">
+                        <div className="flex items-start gap-2">
+                          <h3 className="text-lg font-bold leading-tight pr-2">{project.name}</h3>
+                          {project.isAward && (
+                            <FaTrophy className="text-[#FFD700] animate-pulse flex-shrink-0 mt-1" size={16} />
+                          )}
+                        </div>
+                        <p className="text-[#E0E0E0]/60 text-xs">{project.period}</p>
                       </div>
-                      <p className="text-[#E0E0E0]/60 text-xs mt-1">{project.period}</p>
                     </div>
                   </div>
-                  <div className="flex gap-2 ml-2">
+                  <div className="flex gap-2">
                     <a 
                       href={project.links.github}
                       target="_blank"
@@ -123,12 +125,14 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <div className="relative w-full h-32 md:h-48 mb-4">
+                <div className="relative w-full h-36 md:h-48 mb-4">
                   <motion.div 
-                    className="relative h-full rounded-lg overflow-hidden"
+                    className="relative h-full rounded-lg overflow-hidden group"
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.3 }}
                   >
+                    <div className={`absolute inset-0 bg-gradient-to-br ${project.isAward ? 'from-[#FFD700]/20' : 'from-[#5856D6]/20'} to-transparent z-10`} />
+                    <div className={`absolute inset-0 border ${project.isAward ? 'border-[#FFD700]/20' : 'border-[#0FF0FC]/20'} rounded-lg z-20 shadow-[0_0_15px_rgba(15,240,252,0.2)] transition-all duration-300`} />
                     <Image
                       src={project.demo}
                       alt={`${project.name} Demo`}
@@ -142,11 +146,11 @@ export default function Projects() {
                 </div>
 
                 <div>
-                  <div className="px-2 py-0.5 text-xs rounded-full bg-[#0FF0FC]/5 border border-[#0FF0FC]/20 text-[#0FF0FC]/70 inline-block mb-2">
+                  <div className="px-2 py-0.5 text-xs rounded-full bg-[#0FF0FC]/5 border border-[#0FF0FC]/20 text-[#0FF0FC]/70 inline-block mb-3">
                     {project.role}
                   </div>
                   
-                  <div className="flex flex-wrap gap-1.5 mb-2">
+                  <div className="flex flex-wrap gap-1.5 mb-3">
                     {project.stack.map((tech) => (
                       <div
                         key={tech}
@@ -157,20 +161,22 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  <p className="text-[#E0E0E0]/80 text-sm mb-2">{project.description}</p>
+                  <p className="text-[#E0E0E0]/80 text-sm mb-3">{project.description}</p>
 
-                  <ul className="space-y-1">
+                  <ul className="space-y-1.5">
                     {project.achievements.map((achievement, i) => (
-                      <li
+                      <motion.li
                         key={i}
                         className="text-[#E0E0E0]/60 text-xs pl-3 relative before:content-[''] before:absolute before:left-0 before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[#0FF0FC]/30 before:rounded-full"
                       >
                         {achievement}
-                      </li>
+                      </motion.li>
                     ))}
                   </ul>
                 </div>
               </div>
+              
+              <div className={`absolute inset-0 -z-10 bg-gradient-to-r ${project.isAward ? 'from-[#FFD700]/0 via-[#FFD700]/5 to-[#FFD700]/0' : 'from-[#5856D6]/0 via-[#5856D6]/5 to-[#5856D6]/0'} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-xl`} />
             </div>
           ))}
         </div>

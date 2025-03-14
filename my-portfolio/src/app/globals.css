@@ -82,12 +82,19 @@ body {
     padding-top: 2rem;
     padding-bottom: 4rem;
     position: relative;
-    z-index: 1;
-    min-height: auto; /* Allow projects section to be shorter */
+    z-index: 0; /* Change from z-index: 1 */
+    min-height: 100vh; /* Change from min-height: auto */
     height: auto;
-    display: block;
     clear: both;
   }
+
+  /* Ensure proper spacing between sections */
+  section {
+    overflow: visible;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+  
 
   #skills {
     margin-top: 4rem;
