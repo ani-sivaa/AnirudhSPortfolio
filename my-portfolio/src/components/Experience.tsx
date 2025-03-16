@@ -108,7 +108,7 @@ const experiences: ExperienceItem[] = [
     companyLogo: "/icons/palantir.svg",
     period: "December 2024 - Present",
     role: "Software Engineer fellow",
-    description: "Worked with the Palantir AIP/Foundry to deliver a convenient way for businesses to interact and respond to their customer reviews by building data pipelines and a 'Tinder' like intuitive frontend for auto-generated responses with sentiment analysis",
+    description: "Worked with the Palantir AIP and Palantir Foundry to deliver a convenient way for businesses to interact and respond to their customer reviews by building data pipelines and a 'Tinder' like intuitive frontend for auto-generated responses with sentiment analysis",
     achievements: [
       "97% sentiment accuracy",
       "Worked with real Google Review customer data"
