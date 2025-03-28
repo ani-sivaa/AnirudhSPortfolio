@@ -33,6 +33,7 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
   };
 
   const isGif = (imagePath: string) => imagePath.toLowerCase().endsWith('.gif');
+  const isVideo = (path: string) => path.toLowerCase().endsWith('.gif') || path.toLowerCase().endsWith('.mp4') || path.toLowerCase().endsWith('.webm');
 
   return (
     <div 
@@ -49,13 +50,13 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
           transition={{ duration: 0.1 }}
           className="relative w-full h-full"
         >
-          {isGif(images[currentIndex]) ? (
-            
-            // eslint-disable-next-line @next/next/no-img-element 
-
-            <img
-              src={images[currentIndex]}
-              alt={`Slide ${currentIndex + 1}`}
+          {isVideo(images[currentIndex]) ? (
+            <video
+              src={images[currentIndex].replace('.gif', '.mp4')}
+              autoPlay
+              loop
+              muted
+              playsInline
               className="w-full h-full object-contain"
             />
           ) : (
@@ -63,6 +64,7 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
               src={images[currentIndex]}
               alt={`Slide ${currentIndex + 1}`}
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-contain"
             />
           )}

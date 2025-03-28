@@ -98,8 +98,9 @@ export default function Hero() {
                   src="/images/face/image.jpeg"
                   alt="Profile"
                   fill
+                  sizes="(max-width: 768px) 280px, 380px"
+                  priority={true}
                   className="object-cover rounded-xl"
-                  priority
                 />
               </div>
             </motion.div>
