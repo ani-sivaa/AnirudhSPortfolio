@@ -32,7 +32,6 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
     setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
-  const isGif = (imagePath: string) => imagePath.toLowerCase().endsWith('.gif');
   const isVideo = (path: string) => path.toLowerCase().endsWith('.gif') || path.toLowerCase().endsWith('.mp4') || path.toLowerCase().endsWith('.webm');
 
   return (
